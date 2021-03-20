@@ -9,7 +9,9 @@
   <!-- ===============================================-->
   <!--    Document Title-->
   <!-- ===============================================-->
-  <title>Sparrow | Look like an expert right from the start</title>
+  {%- block htmltitle %}
+    <title>{% if page and page.title and not page.is_homepage %}{{ page.title }} - {% endif %}{{ config.site_name }}</title>
+  {%- endblock %}
 
   <!-- ===============================================-->
   <!--    Favicons-->
@@ -60,8 +62,15 @@
         </svg></div>
       <div class="fancynavbar-addon"
         data-zanim-lg='{"from":{"opacity":1,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}'
-        data-zanim-trigger="scroll"><a class="fancynavbar-addon-item" href="#"><span
-            class="fab fa-twitter"></span></a><a class="fancynavbar-addon-item" href="#languageModal"
+        data-zanim-trigger="scroll">
+        {%- block search_button %}
+          {%- if 'search' in config['plugins'] %}
+              <a href="#" class="nav-link fancynavbar-addon-item" data-toggle="modal" data-target="#mkdocs_search_modal">
+                  <i class="fa fa-search"></i> Search
+              </a>
+          {%- endif %}
+        {%- endblock %}
+        <a class="fancynavbar-addon-item" href="#languageModal"
           data-toggle="modal"><span class="text-sans-serif ls font-weight-black fs--1 d-block">EN</span></a></div>
     </div>
     <div class="fancynavbar-collapse">
@@ -69,25 +78,27 @@
         <!-- <li class="fancynav-item"><a class="fancynav-link" href="page-portfolio.html"><span class="fancynav-link-content">portfolio</span></a></li>
         <li class="fancynav-item"><a class="fancynav-link" href="page-contact.html"><span class="fancynav-link-content">contact</span></a></li> -->
         {% if nav|length>1 %}
-        <ul>
           {% for nav_item in nav %}
           {% if nav_item.children %}
-          <li>{{ nav_item.title }}
+          <li class="fancynav-item">{{ nav_item.title }}
             <ul>
               {% for nav_item in nav_item.children %}
-              <li class="{% if nav_item.active%}current{% endif %}">
-                <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+              <li class="{% if nav_item.active%}current{% endif %} fancynav-item">
+                <a  class="fancynav-link" href="{{ nav_item.url|url }}">
+                  <span class="fancynav-link-content">{{ nav_item.title }}</span>
+                </a>
               </li>
               {% endfor %}
             </ul>
           </li>
           {% else %}
-          <li class="{% if nav_item.active%}current{% endif %}">
-            <a href="{{ nav_item.url|url }}">{{ nav_item.title }}</a>
+          <li class="{% if nav_item.active%}current{% endif %} fancynav-item">
+            <a class="fancynav-link" href="{{ nav_item.url|url }}">
+              <span class="fancynav-link-content">{{ nav_item.title }}</span>
+            </a>
           </li>
           {% endif %}
           {% endfor %}
-        </ul>
         {% endif %}
       </ul>
     </div>
@@ -100,9 +111,10 @@
   <!-- ===============================================-->
   <!--    Main Content-->
   <!-- ===============================================-->
-  <main class="main min-vh-100" id="top">
 
+  <main class="main min-vh-100" id="top">
     <!-- <section> begin ============================-->
+    {% if page.is_homepage %}
     <section class="py-0 overflow-hidden bg-white" data-zanim-timeline='{"delay":0.4}' data-zanim-trigger="scroll">
       <div class="container-fluid">
         <div class="devices-wrapper">
@@ -147,14 +159,14 @@
             </div>
         </div>
       </div><!-- end of .container-->
-    </section><!-- <section> close ============================-->
+    </section>
+    {% endif %}
+    <!-- <section> close ============================-->
     <!-- ============================================-->
-
-
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <section class="text-sans-serif text-center py-6 py-xl-9 bg-dark">
+    <!-- <section class="text-sans-serif text-center py-6 py-xl-9 bg-dark">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-9 col-lg-10">
@@ -164,8 +176,10 @@
             <hr class="hr-short border-500 mt-6">
           </div>
         </div>
-      </div><!-- end of .container-->
-    </section><!-- <section> close ============================-->
+      </div>
+    </section> -->
+    <!-- end of .container-->
+    <!-- <section> close ============================-->
     <!-- ============================================-->
 
 
@@ -190,35 +204,30 @@
 
     <!-- ============================================-->
     <!-- <section> begin ============================-->
-    <!-- <section class="pb-0">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 px-5 py-3">
-              <hr class="border-danger ml-0" data-zanim-xs='{"from":{"width":0},"to":{"width":"100%"}}' data-zanim-trigger="scroll">
-              <h2 class="font-weight-normal">GPU enhanced animation for life-like experiences</h2>
-            </div>
-            <div class="col-lg-6 px-5 py-3">
-              <hr class="border-danger ml-0" data-zanim-xs='{"delay":0.2,"from":{"width":0},"to":{"width":"100%"}}' data-zanim-trigger="scroll">
-              <h2 class="font-weight-normal">All the power of Bootstrap 4 core &amp; popular plugins</h2>
-            </div>
-            <div class="col-lg-6 px-5 py-3">
-              <hr class="border-danger ml-0" data-zanim-xs='{"delay":0.4,"from":{"width":0},"to":{"width":"100%"}}' data-zanim-trigger="scroll">
-              <h2 class="font-weight-normal">Works from IE 11 to Safari &amp; everything in between</h2>
-            </div>
-            <div class="col-lg-6 px-5 py-3">
-              <hr class="border-danger ml-0" data-zanim-xs='{"delay":0.6,"from":{"width":0},"to":{"width":"100%"}}' data-zanim-trigger="scroll">
-              <h2 class="font-weight-normal">More extendable, customizable &amp; hackable</h2>
-            </div>
-          </div>
-          <div class="row justify-content-center text-center">
-            <div class="col-lg-8 col-xl-8 py-8">
-              <hr class="hr-short border-500 mb-6">
-              <p class="text-sans-serif lead text-dark">Discover all the possibilities you can create with Sparrow</p><a class="btn btn-danger mt-3" href="#">Purchase now</a>
-            </div>
-          </div> -->
-    <!-- </div> -->
+    <section class="pb-0">
+      <div class="container">
+        <div class="row">
+          {%- block content %}
+            <div class="col-md-3">{% include "toc.html" %}</div>
+            <div class="col-md-9" role="main">{% include "content.html" %}</div>
+          {%- endblock %}
+        </div>
+        <div class="row" style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+          {%- block next_prev %}
+            {%- if page and (page.next_page or page.previous_page) %}
+               <button id="prev" type="button" data-url="{{ page.previous_page.url|url }}" class="btn btn-outline-primary btn-sm" {% if not page.previous_page %}disabled="disabled"{% endif %}>
+                  <i class="fa fa-arrow-left"></i> Previous
+               </button>
+               <button id="next" data-url="{{ page.next_page.url|url }}" type="button" class="btn btn-outline-primary btn-sm" {% if not page.next_page %}disabled="disabled"{% endif %}>
+                    Next <i class="fa fa-arrow-right"></i>
+                  </a>
+               </button>
+            {%- endif %}
+          {%- endblock %}
+        </div>
+      </div>
     <!-- end of .container-->
-    <!-- </section> -->
+    </section>
     <!-- <section> close ============================-->
     <!-- ============================================-->
 
@@ -274,6 +283,27 @@
       </div>
     </div>
   </div>
+  {%- block scripts %}
+    <script>
+        var base_url = {{ base_url | tojson }},
+            shortcuts = {{ config.theme.shortcuts | tojson }};
+
+        function jump(e) {
+          let url = e.target.dataset.url;
+          if(!url) return;
+          
+          location.href = url;
+        }
+        document.getElementById('prev').addEventListener('click',jump);
+        document.getElementById('next').addEventListener('click',jump);
+    </script>
+    <script src="{{ 'js/base.js'|url }}" defer></script>
+    {%- for path in config['extra_javascript'] %}
+    <script src="{{ path|url }}" defer></script>
+    {%- endfor %}
+  {%- endblock %}
+  {% if 'search' in config['plugins'] %}{%- include "search-modal.html" %}{% endif %}
+  {%- include "keyboard-modal.html" %}
 
   <!-- ===============================================-->
   <!--    JavaScripts-->
@@ -291,6 +321,7 @@
   <script src="{{ 'pages/assets/lib/isotope-layout/isotope.pkgd.min.js'|url }}"></script>
   <script src="{{ 'pages/assets/lib/isotope-packery/packery-mode.pkgd.min.js'|url }}"></script>
   <script src="{{ 'pages/assets/js/theme.js'|url }}"></script>
+  <script src="{{ 'js/base.js'|url }}"></script>
 </body>
 
 </html>
