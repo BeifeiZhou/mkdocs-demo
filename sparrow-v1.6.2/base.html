@@ -14,22 +14,22 @@
   <!-- ===============================================-->
   <!--    Favicons-->
   <!-- ===============================================-->
-  <link rel="apple-touch-icon" sizes="180x180" href="pages/assets/img/favicons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="pages/assets/img/favicons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="pages/assets/img/favicons/favicon-16x16.png">
-  <link rel="shortcut icon" type="image/x-icon" href="pages/assets/img/favicons/favicon.ico">
-  <link rel="manifest" href="pages/assets/img/favicons/manifest.json">
-  <meta name="msapplication-TileImage" content="pages/assets/img/favicons/mstile-150x150.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'pages/assets/img/favicons/apple-touch-icon.png'|url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'pages/assets/img/favicons/favicon-32x32.png'|url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'pages/assets/img/favicons/favicon-16x16.png '|url }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ 'pages/assets/img/favicons/favicon.ico'|url }}">
+  <link rel="manifest" href="{{ 'pages/assets/img/favicons/manifest.json'|url }}">
+  <meta name="msapplication-TileImage" content="{{ 'pages/assets/img/favicons/mstile-150x150.png'|url }}">
   <meta name="theme-color" content="#ffffff">
 
   <!-- ===============================================-->
   <!--    Stylesheets-->
   <!-- ===============================================-->
-  <link href="pages/assets/lib/loaders.css/loaders.min.css" rel="stylesheet">
+  <link href="{{ 'pages/assets/lib/loaders.css/loaders.min.css'|url }}" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Mono%7cPT+Serif:400,400i%7cLato:100,300,400,700,800,900"
     rel="stylesheet">
-  <link href="pages/assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet">
-  <link href="pages/assets/css/theme.css" rel="stylesheet">
+  <link href="{{ 'pages/assets/lib/fancybox/jquery.fancybox.min.css'|url }}" rel="stylesheet">
+  <link href="{{ 'pages/assets/css/theme.css'|url }}" rel="stylesheet">
 </head>
 
 <body class="has-sidemenu overflow-hidden-x">
@@ -42,7 +42,7 @@
     data-zanim-xs='{"from":{"opacity":1,"y":-43},"to":{"opacity":1,"y":0},"ease":"CubicBezier","duration":0.8,"delay":0.3}'
     data-zanim-trigger="scroll" data-exclusive="true">
     <div class="fancynavbar-togglerbar bg-black"><a class="fancynavbar-brand" href="index.html"><img
-          class="fancynavbar-brand-img" src="pages/assets/img/logo-sparrow-invert.svg" alt="" width="30" height="30"
+          class="fancynavbar-brand-img" src="{{ 'pages/assets/img/logo-sparrow-invert.svg'|url }}" alt="" width="30" height="30"
           data-zanim-lg='{"from":{"opacity":0,"x":45},"to":{"opacity":1,"x":0},"ease":"CubicBezier","duration":0.8,"delay":0.4}'
           data-zanim-trigger="scroll" />
         <!--You can use icon or text logo as well-->
@@ -107,31 +107,31 @@
       <div class="container-fluid">
         <div class="devices-wrapper">
           <div class="macbook-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3" src="pages/assets/img/showcase/macbook-1.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="3" src="{{ 'pages/assets/img/showcase/macbook-1.jpg'|url }}" alt=""></div>
           <div class="ipad--l-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3.8" src="pages/assets/img/showcase/ipad--l-1.jpg" alt="">
+              class="device parallax" data-rellax-speed="3.8" src="{{ 'pages/assets/img/showcase/ipad--l-1.jpg'|url }}" alt="">
           </div>
           <div class="iphone-1" data-zanim-xs='{"delay":0.4,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="4.8" src="pages/assets/img/showcase/iphone-1.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="4.8" src="{{ 'pages/assets/img/showcase/iphone-1.jpg'|url }}" alt=""></div>
           <div class="ipad--l-2" data-zanim-xs='{"delay":0.3,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3.4" src="pages/assets/img/showcase/ipad--l-2.jpg" alt="">
+              class="device parallax" data-rellax-speed="3.4" src="{{ 'pages/assets/img/showcase/ipad--l-2.jpg'|url }}" alt="">
           </div>
           <div class="iphone-2" data-zanim-xs='{"delay":0.2,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="4" src="pages/assets/img/showcase/iphone-2.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="4" src="{{ 'pages/assets/img/showcase/iphone-2.jpg'|url }}" alt=""></div>
           <div class="macbook-2" data-zanim-xs='{"delay":0.4,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="5" src="pages/assets/img/showcase/macbook-2.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="5" src="{{ 'pages/assets/img/showcase/macbook-2.jpg'|url }}" alt=""></div>
           <div class="ipad--l-3" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3.7" src="pages/assets/img/showcase/ipad--l-3.jpg" alt="">
+              class="device parallax" data-rellax-speed="3.7" src="{{ 'pages/assets/img/showcase/ipad--l-3.jpg'|url }}" alt="">
           </div>
           <div class="ipad--p-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="4.8" src="pages/assets/img/showcase/ipad--p-1.jpg" alt="">
+              class="device parallax" data-rellax-speed="4.8" src="{{ 'pages/assets/img/showcase/ipad--p-1.jpg'|url }}" alt="">
           </div>
           <div class="iphone-3" data-zanim-xs='{"delay":0.3,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3" src="pages/assets/img/showcase/iphone-3.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="3" src="{{ 'pages/assets/img/showcase/iphone-3.jpg'|url }}" alt=""></div>
           <div class="iphone-4" data-zanim-xs='{"delay":0.2,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="3" src="pages/assets/img/showcase/iphone-2.jpg" alt=""></div>
+              class="device parallax" data-rellax-speed="3" src="{{ 'pages/assets/img/showcase/iphone-2.jpg'|url }}" alt=""></div>
           <div class="iphone--l-1" data-zanim-xs='{"delay":0.5,"animation":"slide-left","duration":1.5}'><img
-              class="device parallax" data-rellax-speed="2" src="pages/assets/img/showcase/iphone--l-1.jpg" alt="">
+              class="device parallax" data-rellax-speed="2" src="{{ 'pages/assets/img/showcase/iphone--l-1.jpg'|url }}" alt="">
           </div>
         </div>
         <div class="row py-8 min-vh-100 align-items-center">
@@ -278,19 +278,19 @@
   <!-- ===============================================-->
   <!--    JavaScripts-->
   <!-- ===============================================-->
-  <script src="pages/assets/js/jquery.min.js"></script>
-  <script src="pages/assets/js/popper.min.js"></script>
-  <script src="pages/assets/js/bootstrap.js"></script>
-  <script src="pages/assets/js/plugins.js"></script>
-  <script src="pages/assets/lib/loaders.css/loaders.css.js"></script>
-  <script src="pages/assets/js/stickyfill.min.js"></script>
-  <script src="pages/assets/lib/is_js/is.min.js"></script>
-  <script src="pages/assets/lib/jtap/jquery.tap.js"></script>
-  <script src="pages/assets/js/rellax.min.js"></script>
-  <script src="pages/assets/lib/fancybox/jquery.fancybox.min.js"></script>
-  <script src="pages/assets/lib/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="pages/assets/lib/isotope-packery/packery-mode.pkgd.min.js"></script>
-  <script src="pages/assets/js/theme.js"></script>
+  <script src="{{ 'pages/assets/js/jquery.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/popper.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/bootstrap.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/plugins.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/loaders.css/loaders.css.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/stickyfill.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/is_js/is.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/jtap/jquery.tap.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/rellax.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/fancybox/jquery.fancybox.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/isotope-layout/isotope.pkgd.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/lib/isotope-packery/packery-mode.pkgd.min.js'|url }}"></script>
+  <script src="{{ 'pages/assets/js/theme.js'|url }}"></script>
 </body>
 
 </html>
