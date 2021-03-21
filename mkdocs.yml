@@ -1,9 +1,9 @@
-site_name: Cinder
-site_url: https://sourcefoundry.org/cinder/
-site_author: Christopher Simpkins
-site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
-repo_url: "https://github.com/chrissimpkins/cinder"
-copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+site_name: Research group name
+# site_url: https://sourcefoundry.org/cinder/
+# site_author: Christopher Simpkins
+# site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
+# repo_url: "https://github.com/chrissimpkins/cinder"
+# copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
 
 theme:
   name: null
@@ -20,12 +20,13 @@ theme:
 
 
 nav:
-  - Home: index.md
-  - About: about.md
+  - Homes: index.md
+  - Research: research.md
+  - Team: team.md
+  - Publications: publications.md
+  - News: news.md
+  - Contact: contact.md
+  - Join us: joinus.md
 
 markdown_extensions:
   - admonition
-  - toc:
-      # permalink: true
-
-
