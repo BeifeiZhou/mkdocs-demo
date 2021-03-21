@@ -20,7 +20,7 @@ theme:
 
 
 nav:
-  - Homes: index.md
+  - Home: index.md
   - Research: research.md
   - Team: team.md
   - Publications: publications.md
