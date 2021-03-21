@@ -26,6 +26,6 @@ nav:
 markdown_extensions:
   - admonition
   - toc:
-      permalink: true
+      # permalink: true
 
 

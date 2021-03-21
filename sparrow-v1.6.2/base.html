@@ -32,6 +32,22 @@
     rel="stylesheet">
   <link href="{{ 'pages/assets/lib/fancybox/jquery.fancybox.min.css'|url }}" rel="stylesheet">
   <link href="{{ 'pages/assets/css/theme.css'|url }}" rel="stylesheet">
+  <style>
+    .btn-outline-primary{
+      cursor: pointer;
+      color: #000;
+      border-color: #000;
+    }
+    .btn-outline-primary:disabled{
+      color: #000;
+      border-color: #000;
+      opacity: .3;
+    }
+    .btn-outline-primary:not(:disabled):hover{
+      background-color: #000;
+      border-color: #000;
+    }
+  </style>
 </head>
 
 <body class="has-sidemenu overflow-hidden-x">
