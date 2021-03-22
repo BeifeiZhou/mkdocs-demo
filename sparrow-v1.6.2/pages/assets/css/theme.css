@@ -14454,13 +14454,13 @@ body {
 
 section {
   position: relative;
-  padding-top: 4rem;
+  padding-top: 48px;
   padding-bottom: 4rem;
 }
 
 @media (min-width: 992px) {
   section {
-    padding-top: 7.5rem;
+    padding-top: 4rem;
     padding-bottom: 7.5rem;
   }
 }
