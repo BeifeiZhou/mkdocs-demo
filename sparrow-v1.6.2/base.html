@@ -228,11 +228,11 @@
       <div class="container">
         <div class="row">
           {%- block content %}
-            <div class="col-md-3">{% include "toc.html" %}</div>
-            <div class="col-md-9" role="main">{% include "content.html" %}</div>
+            <!-- <div class="col-md-3">{% include "toc.html" %}</div> -->
+            <div class="col-md-12" role="main">{% include "content.html" %}</div>
           {%- endblock %}
         </div>
-        <div class="row" style="display: flex;justify-content: space-between;margin-bottom: 1rem">
+        <!-- <div class="row" style="display: flex;justify-content: space-between;margin-bottom: 1rem">
           {%- block next_prev %}
             {%- if page and (page.next_page or page.previous_page) %}
                <button id="prev" type="button" data-url="{{ page.previous_page.url|url }}" class="btn btn-outline-primary btn-sm" {% if not page.previous_page %}disabled="disabled"{% endif %}>
@@ -244,7 +244,7 @@
                </button>
             {%- endif %}
           {%- endblock %}
-        </div>
+        </div> -->
       </div>
     <!-- end of .container-->
     </section>
